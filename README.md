@@ -12,5 +12,5 @@ Or you could press ISS Express to run the asp.net App.
 
 When the Database isn' connected to the Software :
 Click Tools/Nuget_Package_Manager/Nuget_Packet_Console 
-on the Kernel type : add-Migration initial3
-                     update-database.
+on the Kernel type : 1.  add-Migration initial3
+                     2.  update-database.
