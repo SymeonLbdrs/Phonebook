@@ -1,0 +1,45 @@
+﻿@page
+@model Phonebook.Pages.Contact.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Contacts</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Contacts.ID" />
+            <div class="form-group">
+                <label asp-for="Contacts.First_name" class="control-label"></label>
+                <input asp-for="Contacts.First_name" class="form-control" />
+                <span asp-validation-for="Contacts.First_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contacts.Last_name" class="control-label"></label>
+                <input asp-for="Contacts.Last_name" class="form-control" />
+                <span asp-validation-for="Contacts.Last_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contacts.Phone_number" class="control-label"></label>
+                <input asp-for="Contacts.Phone_number" class="form-control" />
+                <span asp-validation-for="Contacts.Phone_number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index"class="btn btn-info">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

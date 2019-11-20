@@ -1,0 +1,54 @@
+﻿@page
+@model Phonebook.Pages.Contact.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create"class="btn btn-success">Add New</a>
+</p>
+<form>
+    <p>
+        Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].First_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Last_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Phone_number)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Contacts) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone_number)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID"class="btn btn-outline-primary">Edit</a> 
+                <a asp-page="./Details" asp-route-id="@item.ID"class="btn btn-outline-primary">Details</a> 
+                <a asp-page="./Delete" asp-route-id="@item.ID"class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
