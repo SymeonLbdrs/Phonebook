@@ -1,16 +1,31 @@
 # Phonebook
-In order to run The Web based software.
-1.Visual Studio is required.
-2.Web Browser (preferably Chrome)
 
-If the requirements have been met than:
-open the Phonebook.snl folder.
 
-To run or to debugg the App :
-Open Pages/Shared/Layout.csthml (right click on it and click the "View in Browser" )
-Or you could press ISS Express to run the asp.net App. 
+PhoneBook is a ASP.NET CORE  web base interactive software  for dealing with Contacts.
 
-When the Database isn' connected to the Software :
-Click Tools/Nuget_Package_Manager/Nuget_Packet_Console 
-on the Kernel type : 1.  add-Migration initial3
-                     2.  update-database.
+## Installation
+
+Open Phonebook.snl and run the software.
+
+## Database
+```Nuget
+update-database
+```
+
+## Usage
+
+```Web Browser
+View in Browser
+
+Add new contact
+Delete contact 
+Edit contact 
+Search First name
+
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
